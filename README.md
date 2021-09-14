@@ -1,1 +1,1 @@
-1 page desktop website for a store page coming soon.
+1 page desktop website for a store page coming soon!
