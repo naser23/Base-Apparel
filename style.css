@@ -160,10 +160,10 @@ button:hover {
 }
 
 /* // ----- mobile screen styling ----- // */
-@media screen and (max-width: 500px) {
+@media all and (max-width: 500px) {
   body {
     /* background: white; */
-    display: flex;
+    /* display: flex; */
     /* flex-direction: column; */
   }
 
