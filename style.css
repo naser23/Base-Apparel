@@ -38,6 +38,10 @@
   border: 1px solid red;
 }
 
+.hidden {
+  display: none;
+}
+
 /* --- regular styling begins --- */
 body {
   width: 100%;
@@ -162,13 +166,17 @@ button:hover {
 /* // ----- mobile screen styling ----- // */
 @media all and (max-width: 500px) {
   body {
-    /* background: white; */
-    /* display: flex; */
-    /* flex-direction: column; */
+    background: white; 
+    display: flex;
+    flex-direction: column;
   }
 
   .logo {
-    display: hidden;
+    display: none;
+  }
+
+  .desktop-logo {
+    display: none;
   }
 
   .mobile-logo {
@@ -177,5 +185,19 @@ button:hover {
     display: flex;
     padding-top: 1rem;
     padding-left: 2rem;
+  }
+
+  #left-side {
+    height: 50%;
+  }
+
+  #right-side {
+    width:100%;
+    background: url("/Base-Apparel/images/hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 100%;
+    background-size: 100% 30%;
+    object-fit: cover;
   }
 }
