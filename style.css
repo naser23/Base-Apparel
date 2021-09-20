@@ -38,75 +38,159 @@
   border: 1px solid red;
 }
 
-.hidden {
-  display: none;
-}
-
 /* --- regular styling begins --- */
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-image: url("images/bg-pattern-desktop.svg");
   font-family: "Josefin Sans", sans-serif;
   display: flex;
-}
-
-#left-side {
-  width: 60%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.centered-left-side {
-  width: 50%;
+.container {
+  width: 80%;
   height: 80%;
-  /* background: lightgray; */
+  background: lightblue;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: url("/Base-Apparel/images/bg-pattern-desktop.svg");
+  /* justify-content: space-between; */
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-direction: start;
+    flex-wrap: nowrap;
+    background: url("/Base-Apparel/images/bg-pattern-desktop.svg");
+  }
+}
+
+.hero-image {
+  background: url("/Base-Apparel/images/hero-desktop.jpg");
+  height: 100%;
+  width: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  .hero-image {
+    background: url("/Base-Apparel/images/hero-mobile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 30%;
+  }
 }
 
 .logo {
-  width: 50%;
+  width: 60%;
+  height: 15%;
+  /* margin-left: 20%; */
+  display: flex;
+  align-items: center;
 }
 
-.mobile-logo {
-  display: none;
-  /* display: none; */
-  /* width: 50%; */
+@media screen and (max-width: 500px) {
+  .logo {
+    width: 100%;
+    height: 10%;
+  }
 }
 
-/* --- styling for text in middle of left side --- */
-.middle-text {
-  width: 100%;
-  height: 80%;
+.logo-img {
+  padding-left: 20%;
 }
 
-.big-text {
-  margin-top: 30%;
-  letter-spacing: 0.25em;
-  font-size: 5em;
+@media screen and (max-width: 500px) {
+  .logo-img {
+    padding-left: 0;
+    padding-left: 5%;
+    height: 1.5rem;
+  }
 }
 
-.little-text {
-  width: 70%;
+/* ----- text under logo ----- */
+.header {
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  padding-left: 20%;
+  padding-top: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    font-size: 3rem;
+    padding-left: 0%;
+    padding-top: 3rem;
+    text-align: center;
+  }
+}
+
+.hello-shoppers {
+  padding-left: 20%;
   padding-top: 20px;
+  width: 70%;
   font-size: 1rem;
-  line-height: 1.5em;
+  line-height: 1.5rem;
 }
 
-/* --- styling for input field --- */
+@media screen and (max-width: 800px) {
+  .hello-shoppers {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.main-text {
+  width: 60%;
+  /* display: none; */
+}
+
+@media screen and (max-width: 800px) {
+  .main-text {
+    width: 100%;
+  }
+}
+
+/* ----- email input field ----- */
 .input-field {
   padding-top: 40px;
+  width: 60%;
   display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .input-field {
+    order: 6;
+    width: 100%;
+  }
 }
 
 input[type="text"] {
-  width: 80%;
+  width: 60%;
   height: 3rem;
   border-radius: 25px;
   border: 1px solid hsl(0, 36%, 70%);
   outline: none;
+}
+
+@media screen and (max-width: 800px) {
+  input[type="text"] {
+    width: 80%;
+  }
 }
 
 input[placeholder] {
@@ -115,89 +199,33 @@ input[placeholder] {
   font-family: "Josefin Sans", sans-serif;
 }
 
-::placeholder {
-  color: hsl(0, 36%, 70%);
-}
-
+/* --- submit button --- */
 button {
-  width: 17%;
+  width: 6rem;
+  height: 3rem;
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   border: none;
   border-radius: 25px;
-  margin-left: -15%;
+  margin-left: -10%;
+}
+
+@media screen and (max-width: 800px) {
+  button {
+    width: 4.5rem;
+  }
 }
 
 button:hover {
   background: hsl(0, 80%, 86%);
 }
 
-/* ----- div below error text ----- */
-
-.error-text {
-  display: flex;
-  flex-direction: row;
-  padding-left: 20px;
-  padding-top: 10px;
+::placeholder {
+  color: hsl(0, 36%, 70%);
 }
 
-.active-text {
-  padding-top: 10px;
-}
-
-.error-icon {
-  width: 2em;
-  height: 2em;
-  margin-right: 10px;
-  margin-bottom: 15px;
-}
-
-/* --- styling for image on right side --- */
-#right-side {
-  width: 40%;
-  height: 100%;
-  background-image: url("/Base-Apparel/images/hero-desktop.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position: 100%;
-  background-size: 100% 100%;
-  object-fit: cover;
-}
-
-/* // ----- mobile screen styling ----- // */
-@media all and (max-width: 500px) {
-  body {
-    background: white; 
-    display: flex;
-    flex-direction: column;
-  }
-
-  .logo {
-    display: none;
-  }
-
-  .desktop-logo {
-    display: none;
-  }
-
-  .mobile-logo {
-    width: 100%;
-    height: 3rem;
-    display: flex;
-    padding-top: 1rem;
-    padding-left: 2rem;
-  }
-
-  #left-side {
-    height: 50%;
-  }
-
-  #right-side {
-    width:100%;
-    background: url("/Base-Apparel/images/hero-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position: 100%;
-    background-size: 100% 30%;
-    object-fit: cover;
+@media screen and (max-width: 800px) {
+  .main-text {
+    /* display: none; */
+    order: 3;
   }
 }
