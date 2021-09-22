@@ -42,6 +42,7 @@
   background-color: #32de84;
   animation: fadebackground 1s;
 }
+
 @keyframes fadebackground {
   from {
     background-color: #fff;
@@ -87,6 +88,10 @@ body {
   background-position: center;
   width: 40%;
   height: 100%;
+}
+
+button:hover {
+  background: hsl(0, 80%, 86%);
 }
 
 /* // ----- styling for 768px and above ----- // */
@@ -139,6 +144,20 @@ body {
     border: none;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   }
+
+  button:hover {
+    background: hsl(0, 80%, 86%);
+  }
+
+  .active-text {
+    margin-left: 15%;
+    padding-top: 10px;
+  }
+
+  .error-icon {
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
 }
 
 /* // ----- tablet ----- // */
@@ -166,6 +185,20 @@ body {
   input[type="text"] {
     margin-left: 0;
     width: 70%;
+  }
+
+  button:hover {
+    background: hsl(0, 80%, 86%);
+  }
+
+  .active-text {
+    margin-left: 7.5%;
+    padding-top: 10px;
+  }
+
+  .error-icon {
+    vertical-align: middle;
+    margin-bottom: 5px;
   }
 }
 
@@ -241,5 +274,21 @@ body {
     margin-left: -3rem;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     border: none;
+  }
+
+  button:hover {
+    background: hsl(0, 80%, 86%);
+  }
+
+  .active-text {
+    order: 6;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .error-icon {
+    vertical-align: middle;
+    margin-bottom: 5px;
   }
 }
