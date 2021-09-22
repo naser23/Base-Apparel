@@ -1,8 +1,9 @@
 "use strict";
 const button = document.querySelector(".button");
+const inputField = document.getElementById("email");
+const errorText = document.querySelector(".error-text");
 
 button.addEventListener("click", function () {
-  console.log("it worked");
-  document.querySelector(".active-text").classList.toggle("hidden");
-  document.querySelector(".error-icon").classList.toggle("hidden");
+  inputField.classList.toggle("correct-input");
+  errorText.classList.toggle("hidden");
 });
